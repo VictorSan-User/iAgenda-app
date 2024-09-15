@@ -38,7 +38,7 @@ class AuthenticatedSessionController extends RoutingController
      */
     public function destroy(Request $request): RedirectResponse
     {
-        Authenticated::guard('web')->logout();
+        Auth::guard('web')->logout();
 
         $request->session()->invalidate();
 

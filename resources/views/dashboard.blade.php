@@ -33,13 +33,13 @@
                         </div>
 
                         <div id="weekdays">
-                            <div>Domingo</div>
-                            <div>Segunda</div>
-                            <div>Terça</div>
-                            <div>Quarta</div>
-                            <div>Quinta</div>
-                            <div>Sexta</div>
-                            <div>Sábado</div>
+                            <div>      Domingo</div>
+                            <div>      Segunda</div>
+                            <div>      Terça</div>
+                            <div>      Quarta</div>
+                            <div>      Quinta</div>
+                            <div>      Sexta</div>
+                            <div>      Sábado</div>
                         </div>
 
 
