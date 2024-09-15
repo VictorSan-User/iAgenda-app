@@ -17,7 +17,6 @@
                  
                     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-                    <title>Calendario</title>
                     </head>
 
                     <body>
@@ -33,13 +32,13 @@
                         </div>
 
                         <div id="weekdays">
-                            <div>      Domingo</div>
-                            <div>      Segunda</div>
-                            <div>      Terça</div>
-                            <div>      Quarta</div>
-                            <div>      Quinta</div>
-                            <div>      Sexta</div>
-                            <div>      Sábado</div>
+                            <div>Domingo</div>
+                            <div>Segunda</div>
+                            <div>Terça</div>
+                            <div>Quarta</div>
+                            <div>Quinta</div>
+                            <div>Sexta</div>
+                            <div>Sábado</div>
                         </div>
 
 
@@ -51,10 +50,12 @@
 
                     <div id="newEventModal" class="text-black-900 bg-slate-700">
                         <h2><strong>Novo Evento</strong></h2>
-
-                        <input id="eventTitleInput"/>
-
-                        <button id="saveButton"> Salvar</button>
+                    
+                        <input id="eventTitleInput" placeholder="Título" />
+                        <input id="eventStartTimeInput" type="time" placeholder="Hora de Início" />
+                        <input id="eventEndTimeInput" type="time" placeholder="Hora de Fim" />
+                    
+                        <button id="saveButton">Salvar</button>
                         <button id="cancelButton">Cancelar</button>
                     </div>
 
