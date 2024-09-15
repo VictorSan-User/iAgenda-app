@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 flex-content">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
@@ -26,33 +26,33 @@
                             <div id="monthDisplay"></div>
 
                             <div>
-                            <button id="backButton">Voltar</button>
-                            <button id="nextButton">Próximo</button>
+                            <button id="backButton"><</button>
+                            <button id="nextButton">></button>
                             </div>
                             
                         </div>
 
                         <div id="weekdays">
                             <div>Domingo</div>
-                            <div>Segunda-feira</div>
-                            <div>Terça-feira</div>
-                            <div>Quarta-feira</div>
-                            <div>Quinta-feira</div>
-                            <div>Sexta-feira</div>
+                            <div>Segunda</div>
+                            <div>Terça</div>
+                            <div>Quarta</div>
+                            <div>Quinta</div>
+                            <div>Sexta</div>
                             <div>Sábado</div>
                         </div>
 
 
-                        <!-- div dinamic -->
+                      
                         <div id="calendar" ></div>
 
                     
                     </div>
 
-                    <div id="newEventModal">
-                        <h2>New Evente</h2>
+                    <div id="newEventModal" class="text-black-900 bg-slate-700">
+                        <h2><strong>Novo Evento</strong></h2>
 
-                        <input id="eventTitleInput" placeholder="Event Title"/>
+                        <input id="eventTitleInput"/>
 
                         <button id="saveButton"> Salvar</button>
                         <button id="cancelButton">Cancelar</button>

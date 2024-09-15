@@ -67,7 +67,7 @@ function load (){
   
   calendar.innerHTML =''
 
-  // criando uma div com os dias:
+  // criando uma div dos dias:
 
   for (let i = 1; i <= paddinDays + daysMonth; i++) {
     const dayS = document.createElement('div')

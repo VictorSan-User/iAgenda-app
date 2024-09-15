@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as RoutingController;
 use Illuminate\Support\Facades\Password;
 use Illuminate\View\View;
-use Symfony\Component\HttpKernel\Attribute\Controller;
 
 class PasswordResetLinkController
 {

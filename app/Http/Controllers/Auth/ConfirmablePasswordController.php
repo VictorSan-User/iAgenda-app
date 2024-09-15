@@ -11,7 +11,8 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\View\View;
 use Symfony\Component\HttpKernel\Controller\ControllerResolver;
 
-class ConfirmablePasswordController extends Controller{
+class ConfirmablePasswordController extends ControllerResolver
+{
     /**
      * Show the confirm password view.
      */
@@ -19,7 +20,7 @@ class ConfirmablePasswordController extends Controller{
     {
         return view('auth.confirm-password');
     }
-    
+
     /**
      * Confirm the user's password.
      */
