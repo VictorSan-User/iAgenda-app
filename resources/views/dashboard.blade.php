@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+        <h2 class="font-semibold text-4xl text-gray-800 leading-tight">
+            {{ __('Minha Agenda') }}
         </h2>
     </x-slot>
 
@@ -22,13 +22,14 @@
                     <body>
                     <div id="container">
                         <div id="header">
-                            <div id="monthDisplay"></div>
-
+                            
                             <div>
-                            <button id="backButton"><</button>
+                                <button id="backButton">&lt;</button>
+                            </div>
+                            <div id="monthDisplay"></div>
+                            <div>
                             <button id="nextButton">></button>
                             </div>
-                            
                         </div>
 
                         <div id="weekdays">

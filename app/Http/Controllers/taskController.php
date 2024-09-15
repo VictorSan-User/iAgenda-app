@@ -18,7 +18,7 @@ class TaskController extends Model
         return view('tasks.index', compact('tasks'));
     }
 
-    // Exibe o formulário de criação de nova tarefa
+    //formulário de criação de nova tarefa
     public function create()
     {
         return view('tasks.create');

@@ -154,4 +154,12 @@ html{
     background-color: rgba(0,0,0,0.8);
   }
   
+  .month-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+
   
