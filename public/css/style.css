@@ -56,7 +56,7 @@ html{
     background-color:var(--header-button);
   }
   #container {
-    width: 770px;
+    width: 100%;
   }
   #weekdays {
     width: 100%;
@@ -64,14 +64,14 @@ html{
     color: var(--color-weekdays) ;
   }
   #weekdays div {
-    width: 100px;
-    padding: 10px;
+    width: 100%;
+    display: flex;
+    color: var(--color-weekdays) ;
   }
   #calendar {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
   }
   .day {
     width: 100px;
