@@ -8,7 +8,7 @@
 </p>
 
 ## Execução do Projeto
-No terminal execute o comando:
+No terminal execute o comando:<br>
 php artisan serve
 
 ## About Laravel
