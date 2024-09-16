@@ -1,70 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Agenda Laravel
+Desafio
+Desenvolver uma agenda utilizando PHP, MySQL e o Framework Laravel. O objetivo do projeto é testar habilidades na linguagem orientada a objetos e no padrão MVC, aproveitando a elegância do Laravel para criar páginas simples e intuitivas.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Objetivo
+O projeto visa implementar um sistema de agenda multiusuário que permite o cadastro e gerenciamento de tarefas. O sistema deve garantir que não haja tarefas agendadas para o mesmo dia e horário para um único usuário.
 
-## Execução do Projeto
-No terminal execute o comando:<br>
+Descrição do Projeto
+O projeto inclui as seguintes funcionalidades:
+
+Tela de Login: Sistema de autenticação de usuários.
+Cadastro de Usuário: Permite o registro de novos usuários.
+Cadastro de Tarefas: Usuários podem adicionar tarefas, com a validação para evitar tarefas no mesmo dia e horário.
+Interface: Utiliza o Bootstrap (ou outra biblioteca CSS) para uma interface amigável e responsiva.
+Validação: Validação de entradas para evitar duplicidade de tarefas.
+Multiusuário: Sistema deve permitir múltiplos usuários com autenticação e gerenciamento de tarefas específicos para cada um.
+
+Tecnologias Utilizadas
+PHP: Linguagem de programação para o backend.
+MySQL: Banco de dados relacional para armazenamento de dados.
+Laravel: Framework PHP para desenvolvimento web.
+Bootstrap & TailWind: Bibliotecas CSS para estilização.
+
+Requisitos
+PHP 8.2 ou superior
+MySQL
+Composer
+Laravel 11.x
+Instalação
+
+Clone o repositório:
+
+
+git clone https://github.com/yourusername/agenda-laravel.git
+Navegue até o diretório do projeto:
+
+
+cd agenda-laravel
+Instale as dependências do projeto:
+
+
+composer install
+Configure o arquivo .env:
+
+Copie o arquivo .env.example para .env e ajuste as configurações do banco de dados e outras variáveis conforme necessário.
+
+
+cp .env.example .env
+Gere a chave de aplicação do Laravel:
+
+
+php artisan key:generate
+Execute as migrations para criar as tabelas no banco de dados:
+
+
+php artisan migrate
+Inicie o servidor local:
+
+
 php artisan serve
+Acesse o projeto em: http://localhost:8000
 
-## About Laravel
+Uso
+Registro de Usuário: Acesse a página de registro para criar uma nova conta.
+Login: Acesse a página de login para autenticar-se no sistema.
+Gerenciamento de Tarefas: Após o login, você pode adicionar, visualizar e gerenciar suas tarefas. As tarefas são agendadas e não podem se sobrepor.
+Testes
+Os testes são importantes para garantir o funcionamento do sistema. Execute os testes utilizando o PHPUnit:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+php artisan test
+Observação: Caso algum teste não esteja passando, verifique as mensagens de erro e ajuste conforme necessário.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+Licença
+Este projeto é licenciado sob a Licença MIT - consulte o arquivo LICENSE para mais detalhes.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Contato
+Se você tiver alguma dúvida ou sugestão, entre em contato:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Victor Henrique: vihenriquesan@outlook.com
