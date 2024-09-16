@@ -3,30 +3,41 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
+    // Exibe o formulário de registro do usuário
     public function create()
     {
         return view('auth.register');
     }
 
-    public function store(Request $request){
-
-        $request->validate([
+    // Armazena um novo usuário no banco de dados
+    public function store(Request $request)
+    {
+        // Validação de dados
+        $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
         ]);
 
-        UserController::create([
+        // Caso a validação falhe
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect()->route('login')->with('success', 'Novo usuário cadastrado!');
+        // Redireciona para o login com uma mensagem
+        return redirect()->route('login')->with('success', 'Cadastrado!');
     }
 }

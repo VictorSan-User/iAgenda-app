@@ -1,7 +1,7 @@
 html{
 
 
-    --body-color:#FFFCFF ;
+    --body-color:var(--hover);
   
     --header-color:#d36c6c;
   
@@ -151,7 +151,6 @@ html{
     width: 100vw;
     height: 100vh;
     position: absolute;
-    background-color: rgba(0,0,0,0.8);
   }
   
   .month-navigation {

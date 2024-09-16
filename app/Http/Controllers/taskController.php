@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
-use Illuminate\Console\View\Components\Task as ComponentsTask;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
-class TaskController extends Model
+class TaskController extends Controller
 {
     // Exibe a lista de tarefas do usuário autenticado
     public function index()
@@ -18,7 +17,7 @@ class TaskController extends Model
         return view('tasks.index', compact('tasks'));
     }
 
-    //formulário de criação de nova tarefa
+    // Exibe o formulário para criar uma nova tarefa
     public function create()
     {
         return view('tasks.create');

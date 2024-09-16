@@ -46,7 +46,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Relaciona o usuário com os eventos.
+     * Relaciona cada usuário com os eventos.
      */
     public function events()
     {
